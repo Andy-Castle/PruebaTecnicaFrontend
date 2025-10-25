@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/subHeader.css" />
+    <link rel="stylesheet" href="styles/topGrid.css" />
+    <link rel="stylesheet" href="styles/GridHoteles.css" />
+    <link rel="stylesheet" href="styles/CardHoteles.css" />
+    <script src="script.js" defer></script>
+    <title>CancunGuru.com</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="encabezado__interior">
+        <div class="encabezado__grupo">
+          <div class="marca">
+            <img
+              src="Imgs/hotel-svgrepo-com.svg"
+              alt="CancunGuru.com logo"
+              class="marca__icono" />
+            <div class="marca__texto">
+              <span class="marca__nombre">CANCUNGURU.COM</span>
+              <span class="marca__eslogan">TRAVEL EXPERTS</span>
+            </div>
+          </div>
+          <nav class="navegacion" aria-label="Primary">
+            <a href="#" class="navegacion__enlace navegacion__enlace--activo"
+              >Hoteles</a
+            >
+          </nav>
+        </div>
+        <div class="controles">
+          <div class="selector selector--idioma">
+            <img
+              src="Imgs/global-svgrepo-com.svg"
+              alt=""
+              class="selector__icono"
+              aria-hidden="true" />
+            <label class="selector__oculto" for="selector-idioma"
+              >Seleccionar idioma</label
+            >
+            <select
+              id="selector-idioma"
+              class="selector__control"
+              aria-label="Seleccionar idioma">
+              <option value="es" selected>Español</option>
+              <option value="en">Inglés</option>
+            </select>
+          </div>
+          <div class="selector">
+            <label class="selector__oculto" for="selector-moneda"
+              >Seleccionar moneda</label
+            >
+            <select
+              id="selector-moneda"
+              class="selector__control"
+              aria-label="Seleccionar moneda">
+              <option value="mxn" selected>MXN</option>
+              <option value="usd">USD</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="subencabezado">
+      <div class="subencabezado__interior">
+        <nav class="miga" aria-label="Breadcrumb">
+          <ol class="miga__lista">
+            <li class="miga__elemento">
+              <a href="#" class="miga__enlace">Inicio</a>
+            </li>
+            <li class="miga__elemento">
+              <a href="#" class="miga__enlace">Hoteles</a>
+            </li>
+            <li class="miga__elemento miga__elemento--actual" aria-current="page">
+              Canc&uacute;n
+            </li>
+          </ol>
+        </nav>
+        <div class="subencabezado__contenido">
+          <div class="subencabezado__informacion">
+            <span class="subencabezado__destino">Canc&uacute;n</span>
+            <div class="subencabezado__detalles">
+              <div class="detalle">
+                <img
+                  src="Imgs/calendar-svgrepo-com.svg"
+                  alt="icono-calendario"
+                  class="detalle__icono"
+                  aria-hidden="true" />
+                <span class="detalle__texto">30-ago-2024 - 01-sep-2024</span>
+              </div>
+              <div class="detalle">
+                <img
+                  src="Imgs/bed-svgrepo-com.svg"
+                  alt="icono-huespedes"
+                  class="detalle__icono"
+                  aria-hidden="true" />
+                <span class="detalle__texto">2 adultos</span>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="subencabezado__boton">
+            <img
+              src="Imgs/pencil-svgrepo-com.svg"
+              alt="icono-modificar"
+              class="subencabezado__boton-icono"
+              aria-hidden="true" />
+            <span>Modificar</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="top-grid" aria-label="Opciones de resultados">
+      <div class="top-grid__interior">
+        <span class="top-grid__resultados">204 resultados</span>
+        <div class="top-grid__vistas" role="group" aria-label="Cambiar vista">
+          <button
+            type="button"
+            class="top-grid__vista top-grid__vista--activa"
+            aria-pressed="true">
+            <img
+              src="Imgs/grid-svgrepo-com.svg"
+              alt="icono-bloques"
+              class="top-grid__icono"
+              aria-hidden="true" />
+            <span>Bloques</span>
+          </button>
+          <button type="button" class="top-grid__vista" aria-pressed="false">
+            <img
+              src="Imgs/list-ul-alt-svgrepo-com.svg"
+              alt="icono-lista"
+              class="top-grid__icono"
+              aria-hidden="true" />
+            <span>Lista</span>
+          </button>
+          <button type="button" class="top-grid__vista" aria-pressed="false">
+            <img
+              src="Imgs/map-pin-svgrepo-com.svg"
+              alt="icono-mapa"
+              class="top-grid__icono"
+              aria-hidden="true" />
+            <span>Mapa</span>
+          </button>
+        </div>
+        <button type="button" class="top-grid__ordenamiento" aria-haspopup="listbox">
+          <span>Recomendado</span>
+          <img
+            src="Imgs/arrows-verticle-svgrepo-com.svg"
+            alt="icono-flechas-ordenamiento"
+            class="top-grid__ordenamiento-icono"
+            aria-hidden="true" />
+        </button>
+      </div>
+    </section>
+    <section class="grid-hoteles" aria-label="Listado de hoteles">
+      <div class="grid-hoteles__interior">
+        <div class="grid-hoteles__estado" role="status" aria-live="polite">
+          Cargando hoteles...
+        </div>
+        <div class="grid-hoteles__lista" id="hoteles-grid" role="list"></div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+.encabezado {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.encabezado__interior {
+  max-width: 2100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  width: 100%;
+}
+
+.encabezado__grupo {
+  display: flex;
+  align-items: center;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.marca__icono {
+  width: 40px;
+  height: 40px;
+}
+
+.marca__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.marca__nombre {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #02a6a5;
+}
+
+.marca__eslogan {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #11b0b2;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  padding-left: 24px;
+  border-left: 1px solid #dbe2e8;
+}
+
+.navegacion__enlace {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5b6770;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.selector {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border: 1px solid #dbe2e8;
+  border-radius: 999px;
+  background-color: #f9fafc;
+  color: #5b6770;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.selector__icono {
+  width: 18px;
+  height: 18px;
+}
+
+.selector__control {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 24px 0 4px;
+  appearance: none;
+}
+
+.selector__control:focus {
+  outline: none;
+}
+
+.selector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #5b6770;
+  pointer-events: none;
+}
+
+.selector__oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .encabezado__interior {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .marca__icono {
+    width: 34px;
+    height: 34px;
+  }
+
+  .marca__nombre {
+    font-size: 13px;
+    letter-spacing: 1.6px;
+  }
+
+  .marca__eslogan {
+    font-size: 8px;
+    letter-spacing: 2.4px;
+  }
+
+  .navegacion {
+    display: none;
+  }
+
+  .controles {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .selector {
+    flex: 1 1 0;
+    padding: 6px 14px;
+  }
+
+  .selector__control {
+    font-size: 13px;
+    padding-right: 18px;
+  }
+}
